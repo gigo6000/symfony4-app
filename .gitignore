@@ -4,4 +4,5 @@
 /public/bundles/
 /var/
 /vendor/
+.vagrant
 ###< symfony/framework-bundle ###
