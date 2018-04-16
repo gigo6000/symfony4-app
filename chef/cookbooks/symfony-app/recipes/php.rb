@@ -11,7 +11,7 @@ php_fpm_pool 'default' do
     listen '127.0.0.1:9000'
     process_manager 'ondemand'
     user 'vagrant'
-    user 'vagrant'
+    group 'vagrant'
     action :install
 end
 
