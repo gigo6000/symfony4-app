@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+   ServerName <%= @host %>
+   DocumentRoot <%= @docroot%>
+   DirectoryIndex index.php
+
+   ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/<%= @docroot%>/$1 
+
+   <Directory <%= @docroot %> >
+        # enable the .htaccess rewrites
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    AddDefaultCharset utf-8
+
+    CustomLog /var/log/apache2/<%= @host %>-access.log combined
+    ErrorLog /var/log/apache2/<%= @host %>-error.log
+</VirtualHost>    

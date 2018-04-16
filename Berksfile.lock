@@ -1,0 +1,21 @@
+DEPENDENCIES
+  symfony-app
+    path: chef/cookbooks/symfony-app
+
+GRAPH
+  apache2 (5.0.1)
+  build-essential (8.1.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  mingw (2.0.2)
+    seven_zip (>= 0.0.0)
+  php (5.1.0)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  seven_zip (2.0.2)
+    windows (>= 1.2.2)
+  symfony-app (0.1.0)
+    apache2 (>= 0.0.0)
+    php (>= 0.0.0)
+  windows (4.1.4)
+  yum-epel (3.1.0)
